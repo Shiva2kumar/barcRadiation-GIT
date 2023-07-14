@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Door
+  - TriggerEnter
+  - Grabbable
+  - cs60
+  - cs137
+  - Ground
+  - RoomLight
+  - SamplesInfoPanel
+  - call
+  - catch
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Radioactive
+  - Water
+  - UI
+  - PlayerLayer
+  - DeviceLayer
+  - elementone
+  - elementtwo
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
