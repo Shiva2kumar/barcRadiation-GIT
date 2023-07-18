@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &257798586809103567
 Transform:
   m_ObjectHideFlags: 0
@@ -126,9 +126,41 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1255222461624973950, guid: dc925471b9b30ec4da87a7580f84e225, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759547143602075283, guid: dc925471b9b30ec4da87a7580f84e225, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2294198383940933148, guid: dc925471b9b30ec4da87a7580f84e225, type: 3}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402129773748475537, guid: dc925471b9b30ec4da87a7580f84e225, type: 3}
+      propertyPath: m_Size.x
+      value: 0.73519886
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402129773748475537, guid: dc925471b9b30ec4da87a7580f84e225, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1077155
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402129773748475537, guid: dc925471b9b30ec4da87a7580f84e225, type: 3}
+      propertyPath: m_Size.z
+      value: 0.7307108
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402129773748475537, guid: dc925471b9b30ec4da87a7580f84e225, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0022440774
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402129773748475537, guid: dc925471b9b30ec4da87a7580f84e225, type: 3}
+      propertyPath: m_Center.y
+      value: 0.008976272
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402129773748475537, guid: dc925471b9b30ec4da87a7580f84e225, type: 3}
+      propertyPath: m_Center.z
+      value: 0.008976347
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc925471b9b30ec4da87a7580f84e225, type: 3}

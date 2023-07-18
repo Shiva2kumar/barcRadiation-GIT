@@ -12,7 +12,7 @@ public class MobilePhone : MonoBehaviour
     public AudioSource AudioSys;
     public ControllerInputsManualBounds ControllerInputBound;
     public bool _ActivateDevice, buttonA, buttonX,notepad,first,second;
-    public GameObject PhoneText;
+    public GameObject PhoneText,doorunlocked;
     void Start()
     {
         AudioSys.mute = true;
@@ -22,6 +22,7 @@ public class MobilePhone : MonoBehaviour
         Doorsunlocked = false;
         Instance = this;
         AudioDevice = false;
+        doorunlocked.SetActive(false);
     }
     void Update()
     {
@@ -56,6 +57,12 @@ public class MobilePhone : MonoBehaviour
         if (first == false)
         {
             PhoneText.SetActive(false);
+        
+        }
+
+        if(Doorsunlocked== true)
+        {
+            doorunlocked.SetActive(true);
         }
     }
     public void PhonePickedup()

@@ -8,12 +8,12 @@ public class ColliderDetector : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         GameObject go = other.gameObject;
-        if(go.name == "RID Variant 1(Clone)")
+        if (go.name == "RID Variant 1(Clone)")
         {
             INV.RIDWorkingValue = true;
         }
 
-        if (go.name == "RID Variant(Clone)")
+        if (go.name == "RID Variant 2(Clone)")
         {
             INV.RIDBrokenValue = true;
         }
@@ -31,6 +31,11 @@ public class ColliderDetector : MonoBehaviour
         if (go.name == "DOD Variant(Clone)")
         {
             INV.DRDValue = true;
+        }
+
+        if (go.name == "DOD Variant 1(Clone)")
+        {
+            INV.DRDValue1 = true;
         }
     }
 
@@ -43,7 +48,7 @@ public class ColliderDetector : MonoBehaviour
             INV.RIDWorkingValue = true;
         }
 
-        if (go.name == "RID Variant(Clone)")
+        if (go.name == "RID Variant 2(Clone)")
         {
             INV.RIDBrokenValue = true;
         }
@@ -62,6 +67,11 @@ public class ColliderDetector : MonoBehaviour
         {
             INV.DRDValue = true;
         }
+
+        if (go.name == "DOD Variant 1(Clone)")
+        {
+            INV.DRDValue1 = true;
+        }
     }
 
 
@@ -73,7 +83,7 @@ public class ColliderDetector : MonoBehaviour
             INV.RIDWorkingValue = false;
         }
 
-        if (go.name == "RID Variant(Clone)")
+        if (go.name == "RID Variant 2(Clone)")
         {
             INV.RIDBrokenValue = false;
         }
@@ -91,6 +101,11 @@ public class ColliderDetector : MonoBehaviour
         if (go.name == "DOD Variant(Clone)")
         {
             INV.DRDValue = false;
+        }
+
+        if (go.name == "DOD Variant 1(Clone)")
+        {
+            INV.DRDValue1 = false;
         }
     }
 }

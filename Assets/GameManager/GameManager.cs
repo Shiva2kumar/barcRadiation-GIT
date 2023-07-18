@@ -22,10 +22,10 @@ public class GameManager : MonoBehaviour
 
     public int RangesRID, RangeTLD, RangeDOD;
 
-    public GameObject RID1, RID2, TLD1, TLD2, DOD,DOD1, TrollyCar;
-    public GameObject PrefabRID1, PrefabRID2, PrefabTLD1, PrefabTLD2, PrefabDOD,PrefabDOD1 , PrefabTrollyCar;
+    public GameObject RID1, RID2, TLD1, TLD2, DOD, DOD1, TrollyCar;
+    public GameObject PrefabRID1, PrefabRID2, PrefabTLD1, PrefabTLD2, PrefabDOD, PrefabDOD1, PrefabTrollyCar;
 
-    public Vector3 RID1Location, RID2Location, TLD1Location, TLDLocation2, DODLocation,DOD1Location , TrollyCarLocation, RID1Rotaion, RID2Rotaion, TLD1Rotation, TLD2Rotaion, DODrotaion, DOD1Rotation, TrollyCarRotation;
+    public Vector3 RID1Location, RID2Location, TLD1Location, TLDLocation2, DODLocation, DOD1Location, TrollyCarLocation, RID1Rotaion, RID2Rotaion, TLD1Rotation, TLD2Rotaion, DODrotaion, DOD1Rotation, TrollyCarRotation;
 
     public InventorySystem Inventory_System;
 
@@ -37,23 +37,35 @@ public class GameManager : MonoBehaviour
     public Vector3 RidDev1Loc, RidDev2Loc, TldDev1Loc, TldDev2Loc, DODDevLoc, RidDev1Rot, RidDev2Rot, TldDev1Rot, TldDev2Rot, DODDevRot, DODDevloc1, DODDevrot1;
     private void OnEnable()
     {
-        BoolsRID.tld1 = false;
-        BoolsRID.tld2 = false;
-        BoolsRID.rid1 = false;
-        BoolsRID.rid2 = false;
+        //BoolsRID.tld1 = false;
+        //BoolsRID.tld2 = false;
+        //BoolsRID.rid1 = false;
+        //BoolsRID.rid2 = false;
+        ABC();
+    }
+
+    public void ABC()
+    {
+        RangesRID = Random.Range(0, 9);
+        RangeTLD = Random.Range(0, 10);
+        RangeDOD = Random.Range(0, 10);
     }
     public void Start()
     {
+        
         Instance = this;
         OvrSpawnner = Instantiate(OVRplayer, new Vector3(SpawnLocation.x, SpawnLocation.y, SpawnLocation.z), Quaternion.identity);
         mainDevicesSpawner();
 
         if (Lobby == true)
         {
+            BoolsRID.tld1 = false;
+            BoolsRID.tld2 = false;
+            BoolsRID.rid1 = false;
+            BoolsRID.rid2 = false;
+
             Inventory_System.LobbyorNot = true;
-            RangesRID = Random.Range(0, 9);
-            RangeTLD = Random.Range(0, 10);
-            RangeDOD = Random.Range(0, 10);
+            
 
             if (RangesRID == 2 || RangesRID == 4 || RangesRID == 6 || RangesRID == 8)
             {
@@ -108,6 +120,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            Lobby = false;
             Inventory_System.LobbyorNot = true;
         }
 
@@ -207,7 +220,7 @@ public class GameManager : MonoBehaviour
 
         if (ControllerTrigger.LeftString == "Gloves" || ControllerTrigger.RightString == "Gloves")
         {
-            if(ControllerTrigger.LeftActive == true || ControllerTrigger.RightActive == true)
+            if (ControllerTrigger.LeftActive == true || ControllerTrigger.RightActive == true)
             {
                 destroyGlove = true;
             }
@@ -236,7 +249,7 @@ public class GameManager : MonoBehaviour
                 destroymask = true;
             }
         }
-        
+
         if (ControllerTrigger.LeftString == "Cover" || ControllerTrigger.RightString == "Cover")
         {
             if (ControllerTrigger.LeftActive == true || ControllerTrigger.RightActive == true)
@@ -263,12 +276,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Destroy(PrefabRID1);
-            Destroy(PrefabRID2);
-            Destroy(PrefabTLD1);
-            Destroy(PrefabTLD2);
-            Destroy(PrefabDOD);
-            Destroy(PrefabDOD1);
+
         }
 
     }
@@ -346,7 +354,7 @@ public class GameManager : MonoBehaviour
             Destroy(DODDev);
         }
 
-        if(Inventory_System.DRDValue1 == true)
+        if (Inventory_System.DRDValue1 == true)
         {
             DODDev1 = Instantiate(DOD1, new Vector3(DODDevloc1.x, DODDevloc1.y, DOD1Location.z), Quaternion.Euler(DODDevrot1.x, DODDevrot1.y, DODDevrot1.z));
         }
@@ -372,5 +380,8 @@ public class GameManager : MonoBehaviour
             HandTriggerActive = false;
         }
     }
+
+
+
 
 }

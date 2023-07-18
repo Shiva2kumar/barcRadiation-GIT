@@ -143,9 +143,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BoolsValue: {fileID: 11400000, guid: 1995ba88f06b1bb47b073e2e7db822b7, type: 2}
+  ControllerInputBound: {fileID: 0}
   RIDDevice1: 0
   RIDDevice2: 0
   DeviceNumber: 1
+  ErrorScreen1: {fileID: 0}
+  MainCanvas: {fileID: 0}
+  _ActivateDevice: 0
+  isSwitchOn: 0
 --- !u!114 &5848838089525163558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,3 +176,4 @@ MonoBehaviour:
   Inputmodule: {fileID: 11400000, guid: 3770d4cf59b6e4743ab2cd019a8c2714, type: 2}
   lefthandV3Rot: {x: 180, y: 240, z: 0}
   rigthhandV3Rot: {x: 180, y: 90, z: 0}
+  PlayerCollider: {fileID: 0}

@@ -19,19 +19,18 @@ public class deviceRID : MonoBehaviour
         dosecs60 = 0;
         dosecs137 = 0;
         RID = false;
+        InvokeRepeating("Rand", 2, 0.3F);
     }
-    private void Update()
+    public void Rand()
     {
         i = Random.Range(0.05f, 0.1f);
         j = Random.Range(0.05f, 0.1f);
-
-        if (RID==false)
+        if (RID == false)
         {
             dosecs60 = i;
             dosecs137 = j;
         }
     }
-
     private void OnTriggerEnter(Collider other)
     {
         RID = true;
